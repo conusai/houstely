@@ -8,6 +8,10 @@ Here's a quick look at Houstely in action:
 
 ![Houstely Demo](./public/houstely.gif)
 
+## 🌐 Demo
+
+Try the live demo: [https://www.houstely.dev](https://www.houstely.dev)
+
 ## 🚀 High-Level Architecture
 ```
 ┌───────────────────────────────────────┐
