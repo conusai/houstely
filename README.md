@@ -12,6 +12,10 @@ Here's a quick look at Houstely in action:
 
 Try the live demo: [https://www.houstely.dev](https://www.houstely.dev)
 
+**Login:**
+- Username: `Admin`
+- Password: `Admin`
+
 ## 🚀 High-Level Architecture
 ```
 ┌───────────────────────────────────────┐
