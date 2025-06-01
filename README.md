@@ -8,7 +8,38 @@ Here's a quick look at Houstely in action:
 
 ![Houstely Demo](./public/houstely.gif)
 
-## 💡 **Value Proposition**
+## 🚀 High-Level Architecture
+```
+┌───────────────────────────────────────┐
+│             Public Internet           │
+└───────────────┬─────────────┬─────────┘
+                │             │
+       ┌────────▼──┐   ┌──────▼─────┐
+       │ Caddy Proxy│   │ VPN Server │  (Public WireGuard)
+       └────────────┘   └────────────┘
+                │
+┌────────────────────────────────────────────┐
+│        Internal Server Network             │
+│                                            │
+│   ┌─────────────┐    ┌──────────────┐      │
+│   │ Server A     │    │ Server B      │     │
+│   │ (WG Client)  │    │ (WG Client)   │     │
+│   └─────────────┘    └──────────────┘      │
+│        │                   │                │
+│        └────── WG Tunnel ──┘                │
+└────────────────────────────────────────────┘
+
+Management App:
+ - Configures WireGuard peers (Server A, B)
+ - Updates Caddy load balancing rules
+ - Provides UI for status, management
+```
+
+## 💡 **Use Case**
+
+**Why self-host?**
+
+Cloud hosting is getting more expensive—especially if you need high-performance CPUs, lots of RAM, or GPU power. What if you could use your own mini computers or virtual servers at home or in the office, and make them securely available from anywhere? Houstely lets you do just that: expose your local infrastructure to the world, while keeping it safe with a modern, zero-trust network setup.
 
 ### Personal Use: Build Your Own Cloud
 With the rise of powerful mini PCs, Houstely enables you to:
@@ -159,35 +190,6 @@ project-root/
 ├── package.json        # Dependencies
 ├── tailwind.config.js  # Tailwind configuration
 └── tsconfig.json       # TypeScript configuration
-```
-
----
-
-## 🚀 High-Level Architecture
-```
-┌───────────────────────────────────────┐
-│             Public Internet           │
-└───────────────┬─────────────┬─────────┘
-                │             │
-       ┌────────▼──┐   ┌──────▼─────┐
-       │ Caddy Proxy│   │ VPN Server │  (Public WireGuard)
-       └────────────┘   └────────────┘
-                │
-┌────────────────────────────────────────────┐
-│        Internal Server Network             │
-│                                            │
-│   ┌─────────────┐    ┌──────────────┐      │
-│   │ Server A     │    │ Server B      │     │
-│   │ (WG Client)  │    │ (WG Client)   │     │
-│   └─────────────┘    └──────────────┘      │
-│        │                   │                │
-│        └────── WG Tunnel ──┘                │
-└────────────────────────────────────────────┘
-
-Management App:
- - Configures WireGuard peers (Server A, B)
- - Updates Caddy load balancing rules
- - Provides UI for status, management
 ```
 
 ---
