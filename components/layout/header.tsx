@@ -60,7 +60,7 @@ export default function Header() {
         <Button variant="ghost" size="icon" className="rounded-full">
           {user?.avatarUrl ? (
             <Image
-              src={user.avatarUrl || "/placeholder.svg"}
+              src={user.avatarUrl || "/avatar.png"}
               width={36}
               height={36}
               alt="User avatar"

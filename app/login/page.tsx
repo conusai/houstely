@@ -42,7 +42,7 @@ export default function LoginPage() {
             className="mx-auto mb-4 rounded-lg"
           />
           <CardTitle className="text-3xl font-bold text-gray-800">Welcome to Houstely</CardTitle>
-          <CardDescription className="text-gray-600">Manage your network infrastructure with ease.</CardDescription>
+          <CardDescription className="text-gray-600">Manage your local services infrastructure with ease.</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-6">

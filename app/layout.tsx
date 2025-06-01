@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/cloudely_logo.png" type="image/png" />
+      </head>
       <body className={`${inter.className} bg-houstely-lightGray`}>
         <ThemeProvider
           attribute="class"

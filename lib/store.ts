@@ -178,7 +178,7 @@ export const useHoustelyStore = createWithEqualityFn<HoustelyState>()(
     login: (username) => {
       console.log("[Store login] Logging in user:", username)
       set({
-        user: { id: "user-1", username, avatarUrl: "/placeholder.svg?height=32&width=32" },
+        user: { id: "user-1", username, avatarUrl: "/avatar.png" },
         error: null,
         initialDataLoaded: false,
         isLoading: false,

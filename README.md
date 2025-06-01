@@ -2,6 +2,12 @@
 
 A modern web application for managing WireGuard VPN peers and Caddy load balancing, built with Next.js. Designed for secure, zero-trust remote access to private resources with a beautiful, user-friendly interface.
 
+## 🖼️ Example
+
+Here's a quick look at Houstely in action:
+
+![Houstely Demo](./houstely.gif)
+
 ## 💡 **Value Proposition**
 
 ### Personal Use: Build Your Own Cloud

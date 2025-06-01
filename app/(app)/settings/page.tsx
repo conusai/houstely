@@ -18,6 +18,15 @@ export default function SettingsPage() {
         <CardHeader>
           <CardTitle>User Profile</CardTitle>
           <CardDescription>Update your personal information.</CardDescription>
+          <div className="flex justify-center mt-4">
+            <img
+              src="/avatar.png"
+              alt="Profile Avatar"
+              width={80}
+              height={80}
+              className="rounded-full border-2 border-houstely-teal shadow-md"
+            />
+          </div>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-1">
