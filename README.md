@@ -14,7 +14,7 @@ Here's a quick look at Houstely in action:
 │             Public Internet           │
 └───────────────┬─────────────┬─────────┘
                 │             │
-       ┌────────▼──┐   ┌──────▼─────┐
+       ┌────────▼───┐   ┌──────▼─────┐
        │ Caddy Proxy│   │ VPN Server │  (Public WireGuard)
        └────────────┘   └────────────┘
                 │
@@ -22,11 +22,11 @@ Here's a quick look at Houstely in action:
 │        Internal Server Network             │
 │                                            │
 │   ┌─────────────┐    ┌──────────────┐      │
-│   │ Server A     │    │ Server B      │     │
-│   │ (WG Client)  │    │ (WG Client)   │     │
+│   │ Server A    │    │ Server B     │      │
+│   │ (WG Client) │    │ (WG Client)  │      │
 │   └─────────────┘    └──────────────┘      │
-│        │                   │                │
-│        └────── WG Tunnel ──┘                │
+│        │                   │               │
+│        └────── WG Tunnel ──┘               │
 └────────────────────────────────────────────┘
 
 Management App:
@@ -276,15 +276,24 @@ pnpm start
 ---
 
 ## 🤝 **Contributing**
-PRs, issues, and feature requests are welcome!  
-1. Fork the repo  
-2. Create a feature branch  
-3. Submit a pull request  
+PRs, issues, and feature requests are welcome!
+
+- Please follow our coding style (Next.js with TypeScript, Tailwind CSS)
+- Include tests and documentation as needed
+- Use `/cloudely_logo.png` for branding where a logo is needed
+- By contributing, you agree your code will be licensed under the GNU Affero General Public License v3.0 (AGPL-3.0)
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for full guidelines.
 
 ---
 
 ## 📝 **License**
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+- You are free to use, modify, and distribute this software under the terms of the AGPL-3.0.
+- If you run a modified version of this software on a server and let users interact with it, you must make the source code available to those users.
+- See the [LICENSE](./LICENSE) file for the full text.
 
 ## 🐳 **Docker Deployment**
 
