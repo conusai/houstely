@@ -35,8 +35,8 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-2xl">
         <CardHeader className="text-center">
           <Image
-            src="/houstely-logo.png"
-            alt="Houstely Logo"
+            src="/cloudely_logo.png"
+            alt="Cloudely Logo"
             width={80}
             height={80}
             className="mx-auto mb-4 rounded-lg"

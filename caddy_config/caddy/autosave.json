@@ -1,0 +1,1 @@
+{"admin":{"disabled":true},"apps":{"http":{"servers":{"srv0":{"automatic_https":{"disable":true},"listen":[":2019"],"routes":[{"handle":[{"handler":"reverse_proxy","upstreams":[{"dial":"caddy:2019"}]}]}]},"srv1":{"automatic_https":{"disable":true},"listen":[":80"],"routes":[{"handle":[{"handler":"reverse_proxy","upstreams":[{"dial":"frontend:3000"}]}]}]}}}}}

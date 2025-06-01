@@ -31,7 +31,7 @@ export default function Sidebar() {
     <aside className="hidden md:flex flex-col w-64 bg-houstely-white border-r border-houstely-lightGray shadow-lg">
       <div className="flex items-center justify-center h-20 border-b border-houstely-lightGray px-4">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <Image src="/houstely-logo.png" alt="Houstely Logo" width={40} height={40} className="rounded-md" />
+          <Image src="/cloudely_logo.png" alt="Cloudely Logo" width={40} height={40} className="rounded-md" />
           <span className="text-2xl font-bold text-houstely-teal">Houstely</span>
         </Link>
       </div>

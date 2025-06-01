@@ -110,7 +110,7 @@ export default function Header() {
                 href="/dashboard"
                 className="flex items-center gap-3 rounded-lg px-4 py-3 text-muted-foreground transition-all hover:text-primary bg-houstely-teal/5 mb-2 border-b"
               >
-                <Image src="/houstely-logo.png" alt="Houstely Logo" width={32} height={32} className="rounded-md" />
+                <Image src="/cloudely_logo.png" alt="Cloudely Logo" width={32} height={32} className="rounded-md" />
                 <span className="font-semibold text-houstely-teal">Houstely</span>
               </Link>
               {navItems.map((item) => (

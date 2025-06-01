@@ -1,0 +1,14 @@
+{
+    admin off
+    auto_https off
+}
+
+# Frontend Application
+:80 {
+    reverse_proxy frontend:3000
+}
+
+# Caddy API (internal only)
+:2019 {
+    reverse_proxy caddy:2019
+} 

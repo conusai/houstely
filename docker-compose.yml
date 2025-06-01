@@ -1,0 +1,63 @@
+services:
+  # Frontend Next.js Application
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - WG_INTERFACE=wg0
+      - WG_PORT=51820
+      - CADDY_API_ENDPOINT=http://caddy:2019
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    depends_on:
+      - caddy
+      - wireguard
+
+  # Caddy Reverse Proxy
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+      - "2019:2019"  # Caddy API
+    volumes:
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - houstely_net
+    restart: unless-stopped
+
+  # WireGuard VPN
+  wireguard:
+    image: linuxserver/wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - SERVERURL=auto
+      - PEERS=1
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.6.0.0/24
+    volumes:
+      - ./wireguard_config:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - "51820:51820/udp"
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    networks:
+      - houstely_net
+    restart: unless-stopped
+
+networks:
+  houstely_net:
+    driver: bridge 
