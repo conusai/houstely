@@ -6,7 +6,7 @@ A modern web application for managing WireGuard VPN peers and Caddy load balanci
 
 Here's a quick look at Houstely in action:
 
-![Houstely Demo](./houstely.gif)
+![Houstely Demo](./public/houstely.gif)
 
 ## 💡 **Value Proposition**
 
@@ -164,6 +164,7 @@ project-root/
 ---
 
 ## 🚀 High-Level Architecture
+```
 ┌───────────────────────────────────────┐
 │             Public Internet           │
 └───────────────┬─────────────┬─────────┘
@@ -187,6 +188,7 @@ Management App:
  - Configures WireGuard peers (Server A, B)
  - Updates Caddy load balancing rules
  - Provides UI for status, management
+```
 
 ---
 
